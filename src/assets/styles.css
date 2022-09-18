@@ -64,6 +64,11 @@ input:focus {
   width: 90%;
   margin: 0 auto;
   padding: 2px 5px;
+  cursor: pointer;
+}
+
+.search_results .result:hover {
+  text-decoration: underline;
 }
 
 .search_results .result:not(:last-child) {
