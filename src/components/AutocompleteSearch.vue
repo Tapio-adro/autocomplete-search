@@ -5,8 +5,14 @@
     ref="input"
     v-model="inputValue"
   >
-  <div v-for="(city, index) in searchResult" :key="index"> 
-    <b>{{ city.slice(0, inputValue.length) }}</b>{{city.slice(inputValue.length, city.length - 1)}}
+  <div class="search_results">
+    <div 
+      v-for="(city, index) in searchResult" :key="index"
+      class="result"
+      :class="{active: false}"
+    > 
+      <b>{{ city.slice(0, inputValue.length) }}</b>{{city.slice(inputValue.length, city.length - 1)}}
+    </div>
   </div>
 </template>
 
@@ -20,7 +26,7 @@ export default {
     return {
       searchResult: [],
       inputValueBefore: '',
-      inputValue: '',
+      inputValue: 'a',
       inputsHistory: ['']
     }
   },
@@ -40,6 +46,9 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    this.updateSearch()
   },
   watch: {
     inputValue() {
