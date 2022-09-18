@@ -5,7 +5,9 @@
     ref="input"
     v-model="inputValue"
   >
-  <div v-for="(city, index) in searchResult" :key="index"> {{ city }} </div>
+  <div v-for="(city, index) in searchResult" :key="index"> 
+    <b>{{ city.slice(0, inputValue.length) }}</b>{{city.slice(inputValue.length, city.length - 1)}}
+  </div>
 </template>
 
 <script>
