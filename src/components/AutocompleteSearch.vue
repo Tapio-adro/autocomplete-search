@@ -12,12 +12,12 @@
     v-show="isInputFocused && inputValue.length"
   >
     <div 
-      v-for="(city, index) in searchResult" :key="index"
+      v-for="(city, index) in searchResult.slice(0, 15)" :key="index"
       class="result"
       :class="{active: chosenResultId == index}"
       @click="handleItemClick(index)"
     > 
-      <b>{{ city.name.slice(0, inputValue.length) }}</b>{{city.name.slice(inputValue.length, city.name.length - 1)}}
+      <b>{{ city.name.slice(0, inputValue.length) }}</b>{{city.name.slice(inputValue.length, city.name.length)}}
     </div>
   </div>
   <div 
@@ -61,6 +61,7 @@ export default {
         return;
       }
       if (this.inputValue.length - this.inputValueBefore.length == 1 && this.inputValue.length != 1) {
+        console.log('now');
         this.searchResult = this.searchResult.filter((city) => {
           return city.name.toLowerCase().startsWith(this.inputValue.toLowerCase())
         })

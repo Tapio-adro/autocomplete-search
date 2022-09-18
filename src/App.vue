@@ -9,8 +9,7 @@
 
 <script>
 import AutocompleteSearch from './components/AutocompleteSearch.vue'
-// import cities from 'cities.json';
-let cities = [
+let cities1 = [
     {
         "country": "AD",
         "name": "Sant Julià de Lòria",
@@ -612,6 +611,7 @@ let cities = [
         "lng": "68.6264"
     }
 ];
+import cities from 'cities.json';
 export default {
   name: 'App',
   data() {
