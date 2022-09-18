@@ -80,4 +80,26 @@ input:focus {
   color: #04AA6D;
   border-radius: 5px;
 }
+
+.result_item {
+  width: 230px;
+  border: 3px solid #ddd;
+  border-top: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.result_item h3 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #04AA6D;
+}
+
+.result_item ul {
+  margin: 0 auto;
+  padding-left: 20px;
+}
 /*# sourceMappingURL=styles.css.map */

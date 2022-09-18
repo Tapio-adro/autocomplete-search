@@ -3,6 +3,7 @@
     type="text"
     @input="updateSearch"
     ref="input"
+    placeholder="city"
     v-model="inputValue"
     @focus="isInputFocused = true"
     @blur="blurInput()"
@@ -46,7 +47,7 @@ export default {
     return {
       searchResult: [],
       inputValueBefore: '',
-      inputValue: 'a',
+      inputValue: '',
       inputsHistory: [''],
       isInputFocused: true,
       chosenResultId: null,
@@ -87,7 +88,7 @@ export default {
     }
   },
   mounted() {
-    this.updateSearch()
+    // this.updateSearch()
     this.$refs.input.focus();
     // this.chosenResult = this.searchResult[this.chosenResultId];
     // this.$refs.input.blur();
