@@ -1,19 +1,9 @@
 # autocomplete-search
 
-## Project setup
-```
-npm install
-```
+Simple search with autocomplete
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Hotkeys
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+*Arrow up* and *arrow down* to navigate
+*Enter* to select
+*Escape* to collapse
